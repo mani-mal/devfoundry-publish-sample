@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-# DevFoundry lab validation check. Runs from the repository root.
 set -euo pipefail
+cd "$(dirname "$0")"
 test -f README.md
-if [ -e hello.txt ]; then
-  [ "$(tr -d '[:space:]' < hello.txt | tr '[:upper:]' '[:lower:]')" = "hello" ]
-fi
+PYTHONPATH=. pytest -q -p no:cacheprovider tests
 echo "lab checks passed"
