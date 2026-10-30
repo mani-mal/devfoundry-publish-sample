@@ -13,3 +13,5 @@ user_shell() {
   [ -n "$line" ] || return 1
   echo "${line##*:}"
 }
+
+# user_shell returns 1 when the user or users.txt is missing.
