@@ -4,3 +4,10 @@
 greet() {
   echo "hello $1"
 }
+
+# Prints the login shell of the named user from users.txt (lines of name:shell).
+user_shell() {
+  local line
+  line=$(grep "^$1" users.txt)
+  echo "${line##*:}"
+}
