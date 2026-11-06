@@ -1,0 +1,10 @@
+# DevFoundry A3 acceptance fixture: do not merge.
+name: test
+on: pull_request
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash -n lib.sh
+      - run: bash tests/run.sh
