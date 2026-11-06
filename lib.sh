@@ -2,5 +2,5 @@
 
 # Prints a greeting for the given name.
 greet() {
-  echo "hello $1"
+  echo "goodbye $1"
 }
