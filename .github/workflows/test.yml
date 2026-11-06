@@ -6,5 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: |
+          echo "write /tmp/cache.tmp: No space left on device"
+          exit 1
       - run: bash -n lib.sh
       - run: bash tests/run.sh
