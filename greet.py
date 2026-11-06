@@ -1,2 +1,2 @@
 def greet(name):
-    return f"goodbye {name}"
+    return f"hello {name}"
